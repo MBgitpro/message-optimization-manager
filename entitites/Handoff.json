@@ -1,0 +1,193 @@
+{
+  "name": "Handoff",
+  "type": "object",
+  "properties": {
+    "deal_name": {
+      "type": "string",
+      "title": "Deal Name"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "Customer Name"
+    },
+    "customer_contact_email": {
+      "type": "string",
+      "title": "Customer Contact Email"
+    },
+    "customer_contact_phone": {
+      "type": "string",
+      "title": "Customer Contact Phone"
+    },
+    "sales_rep": {
+      "type": "string",
+      "title": "Sales Representative"
+    },
+    "sales_rep_email": {
+      "type": "string",
+      "title": "Sales Rep Email"
+    },
+    "delivery_lead": {
+      "type": "string",
+      "title": "Delivery Lead"
+    },
+    "delivery_lead_email": {
+      "type": "string",
+      "title": "Delivery Lead Email"
+    },
+    "deal_value": {
+      "type": "number",
+      "title": "Deal Value ($)"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "at_risk",
+        "blocked"
+      ],
+      "default": "pending"
+    },
+    "current_phase": {
+      "type": "string",
+      "title": "Current Phase",
+      "enum": [
+        "email_confirmation",
+        "initial_meeting",
+        "contracting_vendors",
+        "legal_security",
+        "data_collection",
+        "completed"
+      ],
+      "default": "email_confirmation"
+    },
+    "priority": {
+      "type": "string",
+      "title": "Priority",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "key_deliverables": {
+      "type": "string",
+      "title": "Key Deliverables"
+    },
+    "technical_requirements": {
+      "type": "string",
+      "title": "Technical Requirements"
+    },
+    "security_requirements": {
+      "type": "string",
+      "title": "Security Requirements"
+    },
+    "contract_details": {
+      "type": "string",
+      "title": "Contract Details"
+    },
+    "vendor_info": {
+      "type": "string",
+      "title": "Vendor Information"
+    },
+    "legal_notes": {
+      "type": "string",
+      "title": "Legal Notes"
+    },
+    "data_collection_status": {
+      "type": "string",
+      "title": "Data Collection Status"
+    },
+    "handoff_start_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Handoff Start Date"
+    },
+    "target_completion_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Target Completion Date"
+    },
+    "actual_completion_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Actual Completion Date"
+    },
+    "first_value_date": {
+      "type": "string",
+      "format": "date",
+      "title": "First Value Delivered Date"
+    },
+    "time_to_first_value_days": {
+      "type": "number",
+      "title": "Time to First Value (Days)"
+    },
+    "onboarding_rating": {
+      "type": "number",
+      "title": "Onboarding Rating (1-10)"
+    },
+    "customer_satisfaction_score": {
+      "type": "number",
+      "title": "Customer Satisfaction Score (1-10)"
+    },
+    "checklist_email_confirmation": {
+      "type": "boolean",
+      "title": "Email Confirmation Done",
+      "default": false
+    },
+    "checklist_initial_meeting": {
+      "type": "boolean",
+      "title": "Initial Meeting Done",
+      "default": false
+    },
+    "checklist_kickoff_complete": {
+      "type": "boolean",
+      "title": "Kickoff Complete",
+      "default": false
+    },
+    "checklist_contracts_signed": {
+      "type": "boolean",
+      "title": "Contracts Signed",
+      "default": false
+    },
+    "checklist_vendors_confirmed": {
+      "type": "boolean",
+      "title": "Vendors Confirmed",
+      "default": false
+    },
+    "checklist_legal_approved": {
+      "type": "boolean",
+      "title": "Legal Approved",
+      "default": false
+    },
+    "checklist_security_cleared": {
+      "type": "boolean",
+      "title": "Security Cleared",
+      "default": false
+    },
+    "checklist_data_collected": {
+      "type": "boolean",
+      "title": "CSU Data Collected",
+      "default": false
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    },
+    "risk_flags": {
+      "type": "string",
+      "title": "Risk Flags"
+    }
+  },
+  "required": [
+    "deal_name",
+    "customer_name",
+    "sales_rep",
+    "current_phase",
+    "status"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Communication",
+  "type": "object",
+  "properties": {
+    "handoff_id": {
+      "type": "string",
+      "title": "Handoff ID"
+    },
+    "channel": {
+      "type": "string",
+      "title": "Channel",
+      "enum": [
+        "email",
+        "teams",
+        "text",
+        "phone",
+        "in_app"
+      ],
+      "default": "in_app"
+    },
+    "direction": {
+      "type": "string",
+      "title": "Direction",
+      "enum": [
+        "inbound",
+        "outbound"
+      ],
+      "default": "outbound"
+    },
+    "sender_name": {
+      "type": "string",
+      "title": "Sender Name"
+    },
+    "sender_email": {
+      "type": "string",
+      "title": "Sender Email"
+    },
+    "recipient_name": {
+      "type": "string",
+      "title": "Recipient Name"
+    },
+    "recipient_email": {
+      "type": "string",
+      "title": "Recipient Email"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "body": {
+      "type": "string",
+      "title": "Message Body"
+    },
+    "phase": {
+      "type": "string",
+      "title": "Phase",
+      "enum": [
+        "email_confirmation",
+        "initial_meeting",
+        "contracting_vendors",
+        "legal_security",
+        "data_collection",
+        "general"
+      ],
+      "default": "general"
+    },
+    "is_critical": {
+      "type": "boolean",
+      "title": "Critical Info",
+      "default": false
+    },
+    "ai_summary": {
+      "type": "string",
+      "title": "AI Summary"
+    },
+    "ai_detected_items": {
+      "type": "string",
+      "title": "AI Detected Key Items"
+    },
+    "attachments": {
+      "type": "string",
+      "title": "Attachments"
+    }
+  },
+  "required": [
+    "handoff_id",
+    "channel",
+    "sender_name",
+    "body"
+  ]
+}
