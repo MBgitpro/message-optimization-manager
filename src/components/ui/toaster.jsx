@@ -93,7 +93,7 @@ const ToastDescription = React.forwardRef(({ className, ...props }, ref) => (
 ));
 ToastDescription.displayName = "ToastDescription";
 
-export {
+export const Toaster = {
   ToastProvider,
   ToastViewport,
   Toast,
