@@ -46,16 +46,24 @@ const getAppParams = () => {
         {/* @ts-ignore */}
 		storage.removeItem('token');
 	}
+
+	{/* @ts-ignore */}
+	const viteEnv = import.meta.env || {};
+
+	{/* @ts-ignore */}
+	const fromUrl = !isNode ? window.location.href : '';
+	
+
 	return {
         
-        appId: getAppParamValue("app_id", { defaultValue: import.meta['env'].VITE_BASE44_APP_ID }),
+        appId: getAppParamValue("app_id", { defaultValue: viteEnv.VITE_BASE44_APP_ID }),
 		
         token: getAppParamValue("access_token", { removeFromUrl: true }),
-		fromUrl: getAppParamValue("from_url", { defaultValue: window.location.href }),
+		fromUrl: getAppParamValue("from_url", { defaultValue: fromUrl }),
 		
-        functionsVersion: getAppParamValue("functions_version", { defaultValue: import.meta['env'].VITE_BASE44_FUNCTIONS_VERSION }),
+        functionsVersion: getAppParamValue("functions_version", { defaultValue: viteEnv.VITE_BASE44_FUNCTIONS_VERSION }),
 	
-        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: import.meta['env'].VITE_BASE44_APP_BASE_URL })
+        appBaseUrl: getAppParamValue("app_base_url", { defaultValue: viteEnv.VITE_BASE44_APP_BASE_URL })
 	}
 }
 
