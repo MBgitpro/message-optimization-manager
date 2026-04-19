@@ -14,6 +14,7 @@ import ChatbotPage from './pages/ChatbotPage';
 import TeamCapacity from './pages/TeamCapacity';
 import Reports from './pages/Reports';
 import Security from './pages/Security';
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -62,13 +63,18 @@ function App() {
   return (
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
-        <Router>
-          <AuthenticatedApp />
-        </Router>
-        <Toaster />
+        <TooltipProvider>
+          <Toaster />
+          <BrowserRouter>
+            <Routes>
+              <AuthenticatedApp />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
       </QueryClientProvider>
     </AuthProvider>
   )
 }
+
 
 export default App
